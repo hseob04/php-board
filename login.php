@@ -13,6 +13,6 @@
         <input type="submit" value="로그인">
     </form>
     </br>
-    <button id="join" ></button>
+    <button id="join" onclick="location.href='./join.php'">회원가입</button>
 </body>
 </html>
