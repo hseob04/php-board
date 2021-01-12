@@ -35,7 +35,7 @@
 
 <body>
     <?php
-        $connect = mysqli_connect('localhost','root', '','board') or die ("Connect fail");
+        $connect = mysqli_connect('localhost','root', '','board') or die ("connect fail");
         $query = "select * from board order by number desc";
         $result = $connect->query($query);
         $total = mysqli_num_rows($result);
@@ -75,9 +75,8 @@
 ?>          <tr>
         <?php } ?>
         <td width = "50" align="center"><?php echo $total?></td>
-        <td width = "500" align="center"><a href="view.php?number=<?php echo $row['number']?>">
-                <?php echo $rows['title']?>
-                </td>
+        <td width = "500" align="center"><a href = "view.php?number=<?php echo $rows['number']?>">
+                <?php echo $rows['title']?></td>
         <td width = "100" align="center"><?php echo $rows['id']?></td>
         <td width = "200" align="center"><?php echo $rows['date']?></td>
         <td width = "50" align="center"><?php echo $rows['hit']?></td>
